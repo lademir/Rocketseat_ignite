@@ -1,4 +1,11 @@
-const repositoryName = 'unform';
+import { RepositoryItem } from "./RepositoryItem";
+
+
+const repository = {
+    name: 'unform',
+    description: 'Forms in React',
+    link: 'https://www.github.com/lademir/Rocketseat_ignite'
+}
 
 
 export function RepositoryList() {
@@ -7,30 +14,10 @@ export function RepositoryList() {
             <h1>Lista de repositórios</h1>
 
             <ul>
-                <li>
-                    <strong>{repositoryName}</strong>
-                    <p>Forms in reactJS</p>
-
-                    <a href="">
-                        Acessa repositório
-                    </a>
-                </li>
-                <li>
-                    <strong>{repositoryName}</strong>
-                    <p>Forms in reactJS</p>
-
-                    <a href="">
-                        Acessa repositório
-                    </a>
-                </li>
-                <li>
-                    <strong>{repositoryName}</strong>
-                    <p>Forms in reactJS</p>
-
-                    <a href="">
-                        Acessa repositório
-                    </a>
-                </li>
+               <RepositoryItem repository={repository}/>
+               <RepositoryItem repository={repository}/>
+               <RepositoryItem repository={repository}/>
+               <RepositoryItem repository={repository}/>
             </ul>
         </section>
     )
