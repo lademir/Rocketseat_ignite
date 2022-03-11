@@ -1,6 +1,7 @@
-export function App() {
+import './styles/global.css'
 
-    throw new Error("caiu no erro galera")
+
+export function App() {
 
     return <h1>Hello World oi galera</h1>
 }
