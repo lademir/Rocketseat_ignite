@@ -4,12 +4,6 @@ import { useState, useEffect } from 'react'
 
 // https://api.github.com/users/lademir/repos
 
-const repository = {
-    name: 'unform',
-    description: 'Forms in React',
-    link: 'https://www.github.com/lademir/Rocketseat_ignite'
-}
-
 
 export function RepositoryList() {
 
@@ -26,10 +20,11 @@ export function RepositoryList() {
             <h1>Lista de repositórios</h1>
 
             <ul>
-                <RepositoryItem repository={repository} />
-                <RepositoryItem repository={repository} />
-                <RepositoryItem repository={repository} />
-                <RepositoryItem repository={repository} />
+                {repositories.map(repo => {
+                    return (
+                        <RepositoryItem key={repo.id} repository={repo} />
+                    )
+                })}
             </ul>
         </section>
     )
